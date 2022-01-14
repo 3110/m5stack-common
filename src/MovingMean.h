@@ -6,7 +6,7 @@
 
 template <class T = uint16_t, std::size_t WINDOW_SIZE = 3>
 class MovingMean {
-   public:
+public:
     MovingMean(void)
         : firstTime(true),
           window{
@@ -48,7 +48,7 @@ class MovingMean {
         s.println(get());
     }
 
-   private:
+private:
     bool firstTime;
     std::array<T, WINDOW_SIZE> window;
     size_t pos;
